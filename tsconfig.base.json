@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@dealerdesk/native/core": ["libs/native/core/src/index.ts"],
       "@dealerdesk/native/screens": ["libs/native/screens/src/index.ts"]
     }
   },

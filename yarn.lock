@@ -2479,7 +2479,7 @@
     semver "7.5.3"
     tslib "^2.3.0"
 
-"@nx/expo@16.8.1", "@nx/expo@^16.7.4":
+"@nx/expo@16.8.1":
   version "16.8.1"
   resolved "https://registry.yarnpkg.com/@nx/expo/-/expo-16.8.1.tgz#5a9f465b0f192be953f04eab6f726c2bc318c526"
   integrity sha512-joMhh8UrcDnm16oI8gQbJU2PmXkAYfe6lSqwmv0iuQWfSNvM2ASfjjYFKMfyDu11j56oO4CgNTeSfddPWN1IzQ==
@@ -2503,7 +2503,7 @@
     tsconfig-paths-webpack-plugin "^4.0.0"
     tslib "^2.3.0"
 
-"@nx/jest@16.8.1", "@nx/jest@^16.7.4":
+"@nx/jest@16.8.1":
   version "16.8.1"
   resolved "https://registry.yarnpkg.com/@nx/jest/-/jest-16.8.1.tgz#8a8d332aea84b397e626176ce512c30a21b107f3"
   integrity sha512-/EoJehHiOnRDKTi96Q9mTKt+kIcQSzwMLmWdZYvhdvpTdCjK51ElwK8W3Lt4HdXp4C45gfihLE3jJlJ8q4/5aA==
@@ -2522,7 +2522,7 @@
     resolve.exports "1.1.0"
     tslib "^2.3.0"
 
-"@nx/js@16.8.1", "@nx/js@^16.7.4":
+"@nx/js@16.8.1":
   version "16.8.1"
   resolved "https://registry.yarnpkg.com/@nx/js/-/js-16.8.1.tgz#9f7199a5b923ec089956f50f900ce0deba35203a"
   integrity sha512-SznU6GH/yxj2ro1pgUWDSaoiSiP7UgxMvb2qlyhU1iRB9sdOBhduzVq6+yTgrje2sVSnAWSGbWiQaYkxFLaKWw==
