@@ -124,4 +124,4 @@ Here are several avenues for further enhancement:
 - Introduce web application where the logic can be shared with native app.
 - Better integration with firebase auth, with refresh tokens for long running auth and more options like google auth.
 - Implement better Strategies for configuration for early failure.
-
+- Improving OpenAPI docs
