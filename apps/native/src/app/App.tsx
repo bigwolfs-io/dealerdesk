@@ -20,6 +20,11 @@ export const App = () => {
             component={SignUp}
             options={{ title: 'Register' }}
           />
+          <Stack.Screen
+            name="SignIn"
+            component={SignIn}
+            options={{ title: 'Sign In' }}
+          />
         </Stack.Navigator>
     </NavigationContainer>
   );
