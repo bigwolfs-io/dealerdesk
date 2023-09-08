@@ -11,7 +11,6 @@ export const api = createApi({
     baseUrl: BASE_URL,
 
     prepareHeaders: async (headers,) => {
-      console.log(BASE_URL)
       const token = await AsyncStorage.getItem(TOKEN_KEY)
 
       // If we have a token set in state, let's assume that we should be passing it.
