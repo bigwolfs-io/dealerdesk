@@ -18,12 +18,12 @@ import { useState, useEffect } from 'react';
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY || "AIzaSyB03C8I4qH0YXyrNAEaKaBsmY2t9_sZaCI",
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN || "dealerdesk-92b07.firebaseapp.com",
-  projectId: process.env.FIREBASE_PROJECT_ID || "dealerdesk-92b07",
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET || "dealerdesk-92b07.appspot.com",
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || "610031143893",
-  appId: process.env.FIREBASE_APP_ID || "1:610031143893:web:95bfa4adf9285d91860b5c"
+  apiKey: "AIzaSyB03C8I4qH0YXyrNAEaKaBsmY2t9_sZaCI",
+  authDomain: "dealerdesk-92b07.firebaseapp.com",
+  projectId: "dealerdesk-92b07",
+  storageBucket: "dealerdesk-92b07.appspot.com",
+  messagingSenderId: "610031143893",
+  appId: "1:610031143893:web:95bfa4adf9285d91860b5c"
 };
 
 const app = initializeApp(firebaseConfig);

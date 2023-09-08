@@ -2,14 +2,16 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { ICreateTask, IFindAllTask, ITask, IUpdateTask } from '@dealerdesk/shared/types'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TOKEN_KEY } from './firebase';
+import { BASE_URL } from './config';
 
 export const api = createApi({
   reducerPath: 'api',
   tagTypes: ['Tasks'],
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://192.168.8.101:3000/api',
+    baseUrl: BASE_URL,
 
     prepareHeaders: async (headers,) => {
+      console.log(BASE_URL)
       const token = await AsyncStorage.getItem(TOKEN_KEY)
 
       // If we have a token set in state, let's assume that we should be passing it.
