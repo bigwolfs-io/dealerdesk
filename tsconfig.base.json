@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dealerdesk/native/screens": ["libs/native/screens/src/index.ts"]
+      "@dealerdesk/native/core": ["libs/native/core/src/index.ts"],
+      "@dealerdesk/native/screens": ["libs/native/screens/src/index.ts"],
+      "@dealerdesk/native/types": ["libs/native/types/src/index.ts"],
+      "@dealerdesk/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
