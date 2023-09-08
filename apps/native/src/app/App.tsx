@@ -17,7 +17,6 @@ export const App = () => {
     <NavigationContainer>
       <Provider store={store}>
         <Stack.Navigator initialRouteName="Home">
-        <Stack.Navigator initialRouteName="SignUp">
           <Stack.Screen
             name="SignUp"
             component={SignUp}
@@ -28,6 +27,7 @@ export const App = () => {
             component={SignIn}
             options={{ title: 'Sign In' }}
           />
+          <Stack.Screen name="Home" component={Home} />
           <Stack.Screen
             name="TaskCreate"
             component={TaskCreateOrUpdate}
