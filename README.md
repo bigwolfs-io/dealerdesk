@@ -97,7 +97,11 @@ Alternatively, you can add these credentials to a `.env` at the root of project.
 
 **React Native Configuration**
 
-For React Native, you can optionally configure BASE_URL by providing it in 'libs/native/core/src/libs/config.ts' if running locally.
+For React Native, you can optionally configure `BASE_URL` by providing it in `libs/native/core/src/libs/config.ts` if running locally. When you run expo app, it gives following message `Metro waiting on exp://192.168.10.5:8081`
+
+The `BASE_URL` would include the IP address and look like this. After combining, it should look something like this.
+
+`http://192.168.10.5:3000/api`
 
 ## Running the App
 
