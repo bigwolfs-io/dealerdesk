@@ -18,7 +18,7 @@ const customConfig = {
   },
   resolver: {
     assetExts: assetExts.filter((ext) => ext !== 'svg'),
-    sourceExts: [...sourceExts, 'svg'],
+    sourceExts: [...sourceExts, 'svg', 'cjs', 'mjs'],
     blockList: exclusionList([/^(?!.*node_modules).*\/dist\/.*/]),
     unstable_enableSymlinks: true,
     unstable_enablePackageExports: true,

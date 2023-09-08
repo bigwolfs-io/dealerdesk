@@ -7,7 +7,7 @@ export const api = createApi({
   reducerPath: 'api',
   tagTypes: ['Tasks'],
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://192.168.10.5:3000/api',
+    baseUrl: 'http://192.168.8.101:3000/api',
 
     prepareHeaders: async (headers,) => {
       const token = await AsyncStorage.getItem(TOKEN_KEY)
