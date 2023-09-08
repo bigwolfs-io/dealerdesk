@@ -6,6 +6,7 @@ import {
   SignIn,
 } from '@dealerdesk/native/screens';
 import { RootStackParamList } from '@dealerdesk/native/types';
+import Toast from 'react-native-toast-message';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -25,6 +26,7 @@ export const App = () => {
             options={{ title: 'Sign In' }}
           />
         </Stack.Navigator>
+      <Toast />
     </NavigationContainer>
   );
 };
