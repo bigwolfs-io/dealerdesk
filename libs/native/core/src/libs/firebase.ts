@@ -8,6 +8,7 @@ import {
   signOut as _signOut,
   initializeAuth,
 } from "firebase/auth";
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import { useState, useEffect } from 'react';
 // import {...} from "firebase/database";
@@ -60,6 +61,7 @@ export const useFirebaseAuth = () => {
       setLoading(true);
       setError(null);
       const res = await _signInWithEmailAndPassword(auth, email, password);
+      await AsyncStorage.setItem(TOKEN_KEY, await res.user?.getIdToken())
     } catch (error: any) {
       console.log(error)
       setError(error.message);
@@ -73,6 +75,7 @@ export const useFirebaseAuth = () => {
       setLoading(true);
       setError(null);
       const res = await _createUserWithEmailAndPassword(auth, email, password);
+      await AsyncStorage.setItem(TOKEN_KEY, await res.user?.getIdToken())
     } catch (error: any) {
       console.log(error)
       setError(error.message);
@@ -86,6 +89,7 @@ export const useFirebaseAuth = () => {
       setLoading(true);
       setError(null);
       await _signOut(auth);
+      await AsyncStorage.removeItem(TOKEN_KEY)
     } catch (error: any) {
       console.log(error)
       setError(error.message);
