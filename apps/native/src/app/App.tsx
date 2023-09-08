@@ -6,6 +6,8 @@ import {
   SignIn,
 } from '@dealerdesk/native/screens';
 import { RootStackParamList } from '@dealerdesk/native/types';
+import { Provider } from 'react-redux';
+import { store } from '@dealerdesk/native/core';
 import Toast from 'react-native-toast-message';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -13,6 +15,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export const App = () => {
   return (
     <NavigationContainer>
+      <Provider store={store}>
         <Stack.Navigator initialRouteName="Home">
         <Stack.Navigator initialRouteName="SignUp">
           <Stack.Screen
@@ -26,6 +29,7 @@ export const App = () => {
             options={{ title: 'Sign In' }}
           />
         </Stack.Navigator>
+      </Provider>
       <Toast />
     </NavigationContainer>
   );
