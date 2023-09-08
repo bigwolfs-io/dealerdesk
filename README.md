@@ -43,7 +43,6 @@ Here is an overview of the project's structural components:
 This structural breakdown showcases the clear separation and organization of the various components that constitute the **DealersDesk** app, facilitating ease of development and maintenance.
 
 ## Features
-Here are some improved features for this project with fixed issues:
 
 1. **Modular Architecture**: The application boasts a modular architecture designed to maximize modularity and reusability across the entire technology stack. This modularity extends to the extent that the application logic can be effortlessly reused in a React web application as well.
 
