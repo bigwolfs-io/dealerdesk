@@ -5,6 +5,7 @@ import { CoreService } from './core.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
+import { TasksModule } from '../tasks/tasks.module';
 import { AuthModule } from '../auth/auth.module';
 import { PreauthMiddleware } from '../auth/guards/preauth.middleware';
 import { User, UserSchema } from '../auth/entities/user.entity';
@@ -33,6 +34,7 @@ function getDbConfig(configService: ConfigService) {
       inject: [ConfigService],
     }),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
+    TasksModule,
     ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
   ],
