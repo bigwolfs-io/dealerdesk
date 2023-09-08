@@ -13,7 +13,19 @@
     "@nx/expo": "*",
     "@expo/metro-config": "*",
     "react-native-svg-transformer": "*",
-    "react": "*"
+    "react": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
+    "@reduxjs/toolkit": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "react-native-toast-message": "*",
+    "firebase": "*",
+    "react-hook-form": "*",
+    "zod": "*",
+    "dayjs": "*",
+    "react-native-modal-datetime-picker": "*",
+    "@react-native-picker/picker": "*",
+    "react-redux": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/native && cp package-lock.json apps/native",
