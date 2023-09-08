@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -21,7 +22,9 @@ const signUpSchema = z.strictObject({
 type SignUpForm = z.infer<typeof signUpSchema>;
 
 export function SignUp({ navigation }: SignUpProps) {
-  const { signUpWithEmailAndPassword, error, loading } = useFirebaseAuth();
+  const { signUpWithEmailAndPassword, error } = useFirebaseAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     control,
     handleSubmit,
@@ -36,10 +39,13 @@ export function SignUp({ navigation }: SignUpProps) {
 
   const onSubmit = async ({ email, password }: SignUpForm) => {
     try {
+      setIsLoading(true); // Set loading to true when API call starts
       await signUpWithEmailAndPassword(email, password);
       navigation.replace('Home');
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false); // Set loading to false when API call completes
     }
   };
 
@@ -80,10 +86,11 @@ export function SignUp({ navigation }: SignUpProps) {
       {errors.password && <Text>This is required.</Text>}
 
       <Button
-        disabled={loading}
-        title="Submit"
+        disabled={isLoading} // Disable the button when loading is true
+        title={isLoading ? 'Submitting...' : 'Submit'}
         onPress={handleSubmit(onSubmit)}
       />
+
       {error && <Text>{error}</Text>}
 
       <View style={{
@@ -102,6 +109,5 @@ export function SignUp({ navigation }: SignUpProps) {
     </View>
   );
 }
-
 
 export default SignUp;

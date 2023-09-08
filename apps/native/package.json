@@ -25,7 +25,8 @@
     "dayjs": "*",
     "react-native-modal-datetime-picker": "*",
     "@react-native-picker/picker": "*",
-    "react-redux": "*"
+    "react-redux": "*",
+    "@hookform/resolvers": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/native && cp package-lock.json apps/native",
