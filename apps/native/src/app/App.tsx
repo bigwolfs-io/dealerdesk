@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
   SignUp,
   SignIn,
+  TaskCreateOrUpdate,
+  Home,
 } from '@dealerdesk/native/screens';
 import { RootStackParamList } from '@dealerdesk/native/types';
 import { Provider } from 'react-redux';
